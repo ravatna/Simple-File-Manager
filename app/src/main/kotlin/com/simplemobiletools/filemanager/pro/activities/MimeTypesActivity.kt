@@ -84,14 +84,14 @@ class MimeTypesActivity : SimpleActivity(), ItemOperationsListener {
             findItem(R.id.toggle_filename).isVisible = currentViewType == VIEW_TYPE_GRID
             findItem(R.id.go_home).isVisible = false
             findItem(R.id.set_as_home).isVisible = false
-            findItem(R.id.settings).isVisible = false
-            findItem(R.id.about).isVisible = false
+//            findItem(R.id.settings).isVisible = false
+//            findItem(R.id.about).isVisible = false
 
             findItem(R.id.temporarily_show_hidden).isVisible = !config.shouldShowHidden
             findItem(R.id.stop_showing_hidden).isVisible = config.temporarilyShowHidden
 
-            findItem(R.id.increase_column_count).isVisible = currentViewType == VIEW_TYPE_GRID && config.fileColumnCnt < MAX_COLUMN_COUNT
-            findItem(R.id.reduce_column_count).isVisible = currentViewType == VIEW_TYPE_GRID && config.fileColumnCnt > 1
+//            findItem(R.id.increase_column_count).isVisible = currentViewType == VIEW_TYPE_GRID && config.fileColumnCnt < MAX_COLUMN_COUNT
+//            findItem(R.id.reduce_column_count).isVisible = currentViewType == VIEW_TYPE_GRID && config.fileColumnCnt > 1
         }
     }
 
@@ -104,8 +104,8 @@ class MimeTypesActivity : SimpleActivity(), ItemOperationsListener {
                 R.id.change_view_type -> changeViewType()
                 R.id.temporarily_show_hidden -> tryToggleTemporarilyShowHidden()
                 R.id.stop_showing_hidden -> tryToggleTemporarilyShowHidden()
-                R.id.increase_column_count -> increaseColumnCount()
-                R.id.reduce_column_count -> reduceColumnCount()
+//                R.id.increase_column_count -> increaseColumnCount()
+//                R.id.reduce_column_count -> reduceColumnCount()
                 else -> return@setOnMenuItemClickListener false
             }
             return@setOnMenuItemClickListener true

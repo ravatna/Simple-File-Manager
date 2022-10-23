@@ -166,9 +166,9 @@ class MainActivity : SimpleActivity() {
             findItem(R.id.temporarily_show_hidden).isVisible = !config.shouldShowHidden && currentFragment !is StorageFragment
             findItem(R.id.stop_showing_hidden).isVisible = config.temporarilyShowHidden && currentFragment !is StorageFragment
 
-            findItem(R.id.increase_column_count).isVisible =
-                currentViewType == VIEW_TYPE_GRID && config.fileColumnCnt < MAX_COLUMN_COUNT && currentFragment !is StorageFragment
-            findItem(R.id.reduce_column_count).isVisible = currentViewType == VIEW_TYPE_GRID && config.fileColumnCnt > 1 && currentFragment !is StorageFragment
+//            findItem(R.id.increase_column_count).isVisible =
+//                currentViewType == VIEW_TYPE_GRID && config.fileColumnCnt < MAX_COLUMN_COUNT && currentFragment !is StorageFragment
+//            findItem(R.id.reduce_column_count).isVisible = currentViewType == VIEW_TYPE_GRID && config.fileColumnCnt > 1 && currentFragment !is StorageFragment
         }
     }
 
@@ -190,10 +190,10 @@ class MainActivity : SimpleActivity() {
                 R.id.change_view_type -> changeViewType()
                 R.id.temporarily_show_hidden -> tryToggleTemporarilyShowHidden()
                 R.id.stop_showing_hidden -> tryToggleTemporarilyShowHidden()
-                R.id.increase_column_count -> increaseColumnCount()
-                R.id.reduce_column_count -> reduceColumnCount()
-                R.id.settings -> launchSettings()
-                R.id.about -> launchAbout()
+//                R.id.increase_column_count -> increaseColumnCount()
+//                R.id.reduce_column_count -> reduceColumnCount()
+//                R.id.settings -> launchSettings()
+//                R.id.about -> launchAbout()
                 else -> return@setOnMenuItemClickListener false
             }
             return@setOnMenuItemClickListener true
